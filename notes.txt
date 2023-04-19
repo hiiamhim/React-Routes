@@ -1,0 +1,18 @@
+>> why we use <Link to=""></Link> from router rather than anchor <a href=""></a>
+>> Becuase default causes the whole page reload and sending http request to backend also causing any application wide state to get lost also causes whole bundle of html re serve which leds to reload of whole page  
+
+>>what is the purpose of NavLink from router
+>>It replaces Link so that we can get special className attrib. which gets an object and return various properties based on current situation of the Link
+One of which is whether we are on that link or not
+e.g className=(({isActive}=>isActive:classes.active:undefined))
+It also can lead to underline property of active route for more than one route  because  its general behaviour is too look for path from begining and for that reason "/" "/abc" will be same for NavLink therefore  always add end={true} to math path from end
+
+//The relative and absolute
+
+//absolute path ="/" - which starts with forward slash
+//relative path="products"- which doesnt not starts with forward slash and is appenedend from its 
+
+rel="route/path"
+rel attribute in Link gets to main values
+route - which works according to the parent child routing
+path- which works according to absolute path working

@@ -1,0 +1,26 @@
+import { Link ,NavLink,useNavigate} from "react-router-dom"
+
+
+import classes from "./MainNavigation.module.css"
+const MainNavigation=props=>{
+  
+    return <>
+    <header className={classes.header}>
+        <nav>
+            <ul className={classes.list}>
+             <li>
+                <NavLink to="/" end={true} className={(({isActive})=>isActive?classes.active:undefined)}>Home</NavLink>
+            </li>  
+           
+            <li>
+                <NavLink to="/products"  end={true} className={(({isActive})=>isActive?classes.active:undefined)}>Products</NavLink>
+            </li>  
+           
+            </ul>
+        </nav>
+    </header>
+    
+    </>
+}
+
+export default MainNavigation
